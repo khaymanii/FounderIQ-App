@@ -20,7 +20,7 @@ const Login = () => {
         <Text className="text-sm font-medium text-gray-600">
           © Copyright 2025{" "}
           <Text className="font-bold text-gray-600">
-            Founder<span className="text-purple-800">IQ</span>
+            Founder<span className="text-purple-800">IQ</span>{" "}
           </Text>
           - All Rights Reserved.
         </Text>
