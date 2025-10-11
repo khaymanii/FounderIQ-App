@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text } from "react-native";
 import "./global.css";
-import Login from "./src/screens/Login";
+import Dropdown from "./src/components/Dropdown";
 import {
   useFonts,
   Merriweather_400Regular,
@@ -30,7 +30,7 @@ export default function App() {
   );
   return (
     <View style={styles.container}>
-      <Login /> <StatusBar style="auto" />
+      <Dropdown /> <StatusBar style="auto" />
     </View>
   );
 }
