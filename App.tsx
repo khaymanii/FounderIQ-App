@@ -17,7 +17,7 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return null; // You can also show a loading screen here
+    return null;
   }
 
   const AppText: React.FC<React.ComponentProps<typeof Text>> = (props) => (

@@ -13,11 +13,13 @@ const Login = () => {
           <View className="pt-6">
             <GoogleLogo size={48} />
           </View>
-          <Text className="text-white text-base -ml-4">Login with Google</Text>
+          <Text className="text-white text-base -ml-4 font-medium">
+            Login with Google
+          </Text>
         </TouchableOpacity>
-        <Text className="text-sm text-gray-600">
-          © Copyright 2025 {""}
-          <Text className="font-semibold text-gray-600">
+        <Text className="text-sm font-medium text-gray-600">
+          © Copyright 2025{" "}
+          <Text className="font-bold text-gray-600">
             Founder<span className="text-purple-800">IQ</span>
           </Text>
           - All Rights Reserved.
