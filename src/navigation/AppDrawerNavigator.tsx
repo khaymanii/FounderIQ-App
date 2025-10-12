@@ -1,5 +1,4 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeScreen from "../screens/HomeScreen";
 import ChatScreen from "../screens/ChatScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import CustomSidebar from "../components/CustomSidebar";
@@ -12,11 +11,11 @@ export default function AppDrawerNavigator() {
       drawerContent={(props) => <CustomSidebar {...props} />}
       screenOptions={{
         headerShown: false,
-        drawerType: "slide",
+        drawerType: "front",
+
         overlayColor: "rgba(0,0,0,0.5)",
       }}
     >
-      <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Chat" component={ChatScreen} />
       <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>

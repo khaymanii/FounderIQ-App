@@ -8,28 +8,23 @@ export default function CustomSidebar({
   return (
     <View className="flex-1 bg-black pt-10">
       {/* Logo */}
-      <View className="px-4 mb-4">
+      <View className="px-4 mb-4 flex-col items-center">
         <Text className="text-white text-xl font-bold text-center">
           Founder<Text className="text-purple-800">IQ</Text>
         </Text>
 
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
-          className="w-full mt-4 py-3 bg-purple-800 rounded text-center"
+          className="w-[100%] mt-4 py-3 bg-purple-800 rounded text-center"
         >
-          <Text className="text-white text-xs font-medium">+ New Chat</Text>
+          <Text className="text-white text-center text-xs font-medium">
+            + New Chat
+          </Text>
         </TouchableOpacity>
       </View>
 
       {/* Navigation items */}
       <ScrollView className="flex-1 px-4">
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Home")}
-          className="py-2"
-        >
-          <Text className="text-white text-xs font-bold">Home</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity
           onPress={() => navigation.navigate("Chat")}
           className="py-2"

@@ -5,7 +5,7 @@ import AppDrawerNavigator from "./AppDrawerNavigator";
 import AuthStackNavigator from "./AuthStackNavigator";
 
 export default function RootNavigator() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // replace with real auth
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // replace with real auth
 
   return (
     <NavigationContainer>
