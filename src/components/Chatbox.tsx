@@ -22,7 +22,9 @@ export default function Chatbox() {
         <TouchableOpacity
           disabled={!input.trim()}
           className={`w-7 h-7 rounded-full items-center justify-center ${
-            input.trim() ? "bg-purple-800" : "bg-gray-300 text-gray-600"
+            input.trim()
+              ? "bg-purple-800 text-white"
+              : "bg-gray-300 text-gray-600"
           }`}
         >
           <AntDesign name="arrow-up" size={16} color="black" />

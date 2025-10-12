@@ -1,10 +1,20 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { DrawerContentComponentProps } from "@react-navigation/drawer";
-import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { useState } from "react";
+import LogoutModal from "./LogOutModal";
 
 export default function CustomSidebar({
   navigation,
 }: DrawerContentComponentProps) {
+  const [logoutModalVisible, setLogoutModalVisible] = useState(false);
+
+  const handleLogout = () => {
+    // 👇 Place your actual logout logic here
+    console.log("User logged out");
+    setLogoutModalVisible(false);
+    navigation.navigate("Login");
+  };
   return (
     <View className="flex-1 bg-black pt-10">
       {/* Logo */}
@@ -15,7 +25,7 @@ export default function CustomSidebar({
 
         <TouchableOpacity
           onPress={() => navigation.navigate("Home")}
-          className="w-[100%] mt-4 py-3 bg-purple-800 rounded text-center"
+          className="w-[100%] my-4 py-3 bg-purple-800 rounded text-center"
         >
           <Text className="text-white text-center text-xs font-medium">
             + New Chat
@@ -34,7 +44,7 @@ export default function CustomSidebar({
       </ScrollView>
 
       {/* Profile section */}
-      <View className="px-4 py-4 border-t border-gray-700">
+      <View className="px-4 py-4 flex-row justify-between items-center">
         <View className="flex-row items-center mb-3">
           <Image
             source={{ uri: "https://i.pravatar.cc/100" }}
@@ -43,13 +53,17 @@ export default function CustomSidebar({
           <Text className="text-white font-bold text-xs">John Doe</Text>
         </View>
         <TouchableOpacity
-          onPress={() => console.log("Logout")}
+          onPress={() => setLogoutModalVisible(true)}
           className="flex-row items-center gap-2"
         >
-          <SimpleLineIcons size={16} color="white" />
-          <Text className="text-white text-xs">Logout</Text>
+          <AntDesign name="logout" size={22} color="red" />
         </TouchableOpacity>
       </View>
+      <LogoutModal
+        visible={logoutModalVisible}
+        onCancel={() => setLogoutModalVisible(false)}
+        onConfirm={handleLogout}
+      />
     </View>
   );
 }

@@ -1,6 +1,5 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import ChatScreen from "../screens/ChatScreen";
-import ProfileScreen from "../screens/ProfileScreen";
 import CustomSidebar from "../components/CustomSidebar";
 
 const Drawer = createDrawerNavigator();
@@ -17,7 +16,6 @@ export default function AppDrawerNavigator() {
       }}
     >
       <Drawer.Screen name="Chat" component={ChatScreen} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
 }

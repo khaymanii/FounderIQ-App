@@ -3,6 +3,7 @@ import { DrawerActions, useNavigation } from "@react-navigation/native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Dropdown from "../components/Dropdown";
 import Chatbox from "../components/Chatbox";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function ChatScreen() {
   const navigation = useNavigation();
@@ -20,9 +21,64 @@ export default function ChatScreen() {
         <Dropdown />{" "}
       </View>
 
-      <View className="flex-1 justify-center items-center">
-        <Text>Chat Screen</Text>
-      </View>
+      <ScrollView className="flex-1 justify-center items-center">
+        <View className="mx-4">
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+          <Text>Chat Screen</Text>
+        </View>
+      </ScrollView>
 
       <View>
         <Chatbox />
