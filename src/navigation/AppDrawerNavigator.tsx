@@ -1,9 +1,8 @@
-// navigation/AppDrawer.tsx
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "../screens/HomeScreen";
 import ChatScreen from "../screens/ChatScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-import CustomSidebar from "../components/CustomSIdebar";
+import CustomSidebar from "../components/CustomSidebar";
 
 const Drawer = createDrawerNavigator();
 

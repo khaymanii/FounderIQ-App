@@ -1,4 +1,3 @@
-// components/CustomSidebar.tsx
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { DrawerContentComponentProps } from "@react-navigation/drawer";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
@@ -36,13 +35,6 @@ export default function CustomSidebar({
           className="py-2"
         >
           <Text className="text-white text-xs">Chat</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Settings")}
-          className="py-2"
-        >
-          <Text className="text-white text-xs">Settings</Text>
         </TouchableOpacity>
       </ScrollView>
 

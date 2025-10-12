@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text } from "react-native";
+import RootNavigator from "./src/navigation/RootNavigator";
+
 import "./global.css";
-import Chatbox from "./src/components/Chatbox";
 import {
   useFonts,
   Merriweather_400Regular,
@@ -30,7 +31,7 @@ export default function App() {
   );
   return (
     <View style={styles.container}>
-      <Chatbox /> <StatusBar style="auto" />
+      <RootNavigator /> <StatusBar style="auto" />
     </View>
   );
 }
