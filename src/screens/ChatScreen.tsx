@@ -10,77 +10,32 @@ export default function ChatScreen() {
 
   return (
     <View className="flex-1 bg-purple-100">
-      {/* Header */}
-      <View className="flex-row items-center p-4 gap-20">
-        <TouchableOpacity
-          onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-          className=""
-        >
-          <AntDesign name="menu-unfold" size={24} color="black" />{" "}
-        </TouchableOpacity>
-        <Dropdown />{" "}
+      {/* Fixed Header on Top */}
+      <View className="z-50">
+        <View className="flex-row items-center p-4 gap-20">
+          <TouchableOpacity
+            onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+          >
+            <AntDesign name="menu-unfold" size={24} color="black" />
+          </TouchableOpacity>
+          <Dropdown />
+        </View>
       </View>
 
-      <ScrollView className="flex-1 justify-center items-center">
+      {/* Scrollable Content */}
+      <ScrollView
+        className="flex-1"
+        contentContainerStyle={{ paddingTop: 10, paddingBottom: 80 }}
+      >
         <View className="mx-4">
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
-          <Text>Chat Screen</Text>
+          {Array.from({ length: 60 }).map((_, i) => (
+            <Text key={i}>Chat Screen {i + 1}</Text>
+          ))}
         </View>
       </ScrollView>
 
-      <View>
+      {/* Chatbox Fixed at Bottom */}
+      <View className="absolute bottom-0 w-full bg-purple-100 p-2">
         <Chatbox />
       </View>
     </View>

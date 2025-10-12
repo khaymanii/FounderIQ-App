@@ -29,18 +29,14 @@ export default function LogoutModal({
               onPress={onCancel}
               className="flex-1 bg-gray-300 rounded-lg py-2"
             >
-              <Text className="text-center text-black font-semibold">
-                Cancel
-              </Text>
+              <Text className="text-center text-black font-medium">Cancel</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={onConfirm}
               className="flex-1 bg-purple-800 rounded-lg py-2"
             >
-              <Text className="text-center text-white font-semibold">
-                Logout
-              </Text>
+              <Text className="text-center text-white font-medium">Logout</Text>
             </TouchableOpacity>
           </View>
         </View>
