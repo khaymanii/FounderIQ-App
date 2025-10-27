@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { DrawerContentComponentProps } from "@react-navigation/drawer";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { useState } from "react";
-import LogoutModal from "./LogOutModal";
+import LogoutModal from "./LogoutModal";
 
 export default function CustomSidebar({
   navigation,
