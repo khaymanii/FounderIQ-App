@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
     <View className="flex-1 items-center justify-center bg-purple-100 text-center">
-      <View className="w-[90%] h-[30%] rounded-lg bg-white items-center">
+      <View className="w-[90%] h-[30%] rounded-lg bg-white items-center ">
         <Text className="text-2xl font-bold py-6 mb-5 text-center">
           Founder<Text className="text-purple-800">IQ</Text>
         </Text>
