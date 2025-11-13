@@ -1,15 +1,26 @@
-import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AppDrawerNavigator from "./AppDrawerNavigator";
 import AuthStackNavigator from "./AuthStackNavigator";
+import SplashScreen from "../screens/SplashScreen";
+import { useAuth } from "../context/AuthContext";
 
 export default function RootNavigator() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // replace with real auth
+  const { user, loading } = useAuth();
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 10000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSplash || loading) {
+    return <SplashScreen />;
+  }
 
   return (
     <NavigationContainer>
-      {isLoggedIn ? <AppDrawerNavigator /> : <AuthStackNavigator />}
+      {user ? <AppDrawerNavigator /> : <AuthStackNavigator />}
     </NavigationContainer>
   );
 }

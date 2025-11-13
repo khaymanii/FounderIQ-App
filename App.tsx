@@ -9,6 +9,7 @@ import {
   Merriweather_700Bold,
   Merriweather_500Medium,
 } from "@expo-google-fonts/merriweather";
+import { AuthProvider } from "./src/context/AuthContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,7 +32,9 @@ export default function App() {
   );
   return (
     <View style={styles.container}>
-      <RootNavigator /> <StatusBar style="auto" />
+      <AuthProvider>
+        <RootNavigator /> <StatusBar style="auto" />
+      </AuthProvider>
     </View>
   );
 }
