@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 
 const SplashScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
+    <View className="flex-1 items-center justify-center bg-purple-100">
       <Image
         source={require("../../assets/logo.png")}
         resizeMode="contain"

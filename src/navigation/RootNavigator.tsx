@@ -10,7 +10,7 @@ export default function RootNavigator() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 10000);
+    const timer = setTimeout(() => setShowSplash(false), 7000);
     return () => clearTimeout(timer);
   }, []);
 
