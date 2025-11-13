@@ -8,6 +8,7 @@ import {
 } from "react";
 import { supabase } from "../supabaseClient";
 import type { User } from "@supabase/supabase-js";
+import * as Linking from "expo-linking";
 
 interface AuthContextProps {
   user: User | null;
@@ -54,10 +55,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const signInWithGoogle = async () => {
+    const redirectUrl = Linking.createURL("/"); // founderiq:///
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "exp://127.0.0.1:8081", // change this based on your Expo setup
+        redirectTo: redirectUrl, // change this based on your Expo setup
       },
     });
     if (error) console.error("Google Sign In Error:", error.message);

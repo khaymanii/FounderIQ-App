@@ -1,15 +1,21 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import GoogleLogo from "../components/GoogleLogo";
+import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
+  const { signInWithGoogle } = useAuth();
+
   return (
     <View className="flex-1 items-center justify-center bg-purple-100 text-center">
       <View className="w-[90%] h-[30%] rounded-lg bg-white items-center">
         <Text className="text-2xl font-bold py-6 mb-5 text-center">
           Founder<Text className="text-purple-800">IQ</Text>
         </Text>
-        <TouchableOpacity className="bg-purple-800 rounded-lg w-[80%] h-[15%] flex-row items-center justify-center py-6 mb-6">
+        <TouchableOpacity
+          onPress={signInWithGoogle}
+          className="bg-purple-800 rounded-lg w-[80%] h-[15%] flex-row items-center justify-center py-6 mb-6"
+        >
           <View className="pt-6">
             <GoogleLogo size={48} />
           </View>
